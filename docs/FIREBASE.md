@@ -29,6 +29,21 @@ firebase init
 
 Select "Functions" and "Hosting" from the appearing menu. Then choose "Use an existing project" and pick the Firebase project you created before (for me 'mockatalog').
 
+Link Firebase project ID (available with ```firebase projects:list```) with current directory:
+
+```bash
+# my project id is 'mockkatalog' use yours accordingly if you pick another name
+firebase use --add mockatalog
+``` 
+
+Google cloud services may create costs, so you may need to have to set up billing for the next steps (else you'll see an error like ```Billing must be enabled for activation of service(s) 'cloudbuild.googleapis.com,containerregistry.googleapis.com' to proceed```).
+
+```bash
+firebase deploy
+```
+
+After that finisehes successfully you should see a welcome page under your [project URL](https://mockatalog.web.app/).
+
 ### Additional information
 
 - [Starting point](https://medium.com/@hossainkhan/create-your-own-mock-api-server-with-express-js-and-firebase-for-free-9dba2bfbc754) for this project
