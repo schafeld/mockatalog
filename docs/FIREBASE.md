@@ -1,8 +1,11 @@
 # Mockatalog
+
 ## Mock Shop Items Catalog API
+
 Provide an easily configurable mock API for testing eCommerce applications, for instance headless commerce apps.
 
 ## Set Up
+
 ### How to set up a simple Firebase® database
 
 Go to [Firebase](https://console.firebase.google.com/) and create a new Firebase project. (I chose 'mockatalog' for name.)
