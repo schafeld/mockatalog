@@ -11,15 +11,26 @@ const cors = require('cors')({origin: true});
 app.use(cors);
 // [END middleware]
 
-
 /**
- * Say hello API
+ * Say hello <name> as response
  * Try: https://us-central1-mockatalog.cloudfunctions.net/api/say/hello
+ * or with name url parameter: https://us-central1-mockatalog.cloudfunctions.net/api/say/hello?name=Ryan
  */
 app.get('/say/hello', (req, res) => {
-  // Return success response
-  return res.status(200).json({"message":"Hello there... Welcome to Mockatalog server."});
+  // This line won't work online
+  console.log('Request Query Params: ', req.query ? req.query : 'none');
+
+  // Response can be dynamic based on input
+  if(req.query.hasOwnProperty('name') && req.query.name !== "") {
+    return res.status(200)
+      .json({"message":"Hello " + req.query.name + "! Welcome to Mockatalog."});
+ }
+
+  // Success response
+  return res.status(200)
+    .json({"message":"Hello there... Welcome to Mockatalog."});
 });
+/* [END `/say/hello` ] */
 
 
 // Define the Firebase function that will act as Express application
