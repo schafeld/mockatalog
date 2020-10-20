@@ -45,7 +45,17 @@ Google cloud services may create costs, so you may need to have to set up billin
 firebase deploy
 ```
 
-After that finisehes successfully you should see a welcome page under your [project URL](https://mockatalog.web.app/).
+After that finishes successfully you should see a welcome page under your [project URL](https://mockatalog.web.app/).
+
+### Local debugging
+
+Run Firebase locally (see [details](https://firebase.google.com/docs/functions/local-emulator)):
+
+```bash
+firebase emulators:start
+```
+
+Locally hosted function can then be reviewed and debugged under ```http://localhost:5001/mockatalog/us-central1/api/say/hello```
 
 ### Additional information
 

@@ -17,8 +17,8 @@ app.use(cors);
  * or with name url parameter: https://us-central1-mockatalog.cloudfunctions.net/api/say/hello?name=Ryan
  */
 app.get('/say/hello', (req, res) => {
-  // This line won't work online
-  console.log('Request Query Params: ', req.query ? req.query : 'none');
+  // This line won't have any use in production, only for local debugging
+  console.log('Request Query Params: ', req.query);
 
   // Response can be dynamic based on input
   if(req.query.hasOwnProperty('name') && req.query.name !== "") {
