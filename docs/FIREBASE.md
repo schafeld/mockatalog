@@ -57,6 +57,13 @@ firebase emulators:start
 
 Locally hosted function can then be reviewed and debugged under ```http://localhost:5001/mockatalog/us-central1/api/say/hello```
 
+Firebase may need additional access rights configuration, see:
+https://console.cloud.google.com/functions/details/us-central1/api?project=mockatalog
+
+When that is set and the database configured, this may be the API call:
+https://us-central1-mockatalog.cloudfunctions.net/api/userProfile/alice
+
+
 ### Additional information
 
 - [Starting point](https://medium.com/@hossainkhan/create-your-own-mock-api-server-with-express-js-and-firebase-for-free-9dba2bfbc754) for this project
